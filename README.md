@@ -4,6 +4,8 @@
 
 ### Development
 
+To run the app, run the following command at the terminal: 
+
 ```sh
 ruby app.rb
 ```
