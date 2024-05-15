@@ -19,5 +19,6 @@ get '/reverse' do
 end
 
 post '/reverse' do
-    
+    @reversed_string = params[:user_input].reverse
+    erb :reverse
 end

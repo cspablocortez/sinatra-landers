@@ -3,7 +3,14 @@
 <p>Enter a string to see its reversed output.</p>
 
 <form action="/reverse" method="post">
-    <label for="user-input">String:</label>
-    <input type="text" name="user-input">
+    <label for="user_input">String:</label>
+    <input id="user_input" type="text" name="user_input">
     <input type="submit" value="Reverse" class="button-primary">
 </form>
+
+<% if @reversed_string %>
+<p>
+    <strong>Reversed String: </strong>
+    <%= @reversed_string %>
+</p>
+<% end %>
