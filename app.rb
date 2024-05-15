@@ -15,10 +15,9 @@ get '/hello/:name' do
 end
 
 get '/reverse' do
-    erb :reverse
-end
+    if params[:query]
+        @reversed_string = params[:query].reverse
+    end
 
-post '/reverse' do
-    @reversed_string = params[:user_input].reverse
     erb :reverse
 end
