@@ -1,11 +1,23 @@
 require 'sinatra'
 
 get '/' do                                  # root element "http://localhost/"
-    erb :hello, layout: true
+    @name = "World"
+    erb :index
+end
+
+get '/hola' do
+    '¡Hola mundo!'
 end
 
 get '/hello/:name' do             
-    erb 
+    @name = params[:name]
+    erb :hello
 end
 
+get '/reverse' do
+    erb :reverse
+end
 
+post '/reverse' do
+    
+end
